@@ -3,6 +3,7 @@ class SystemClock {
     const date = new Date()
     return date.getHours()
   }
+  
 }
 
 class Greeter {
@@ -10,8 +11,8 @@ class Greeter {
     this.clock = new SystemClock()
   }
 
-  greet () {
-    const currentHour = this.clock.currentHour()
+  greet (hour = undefined) {
+    const currentHour = (hour !== undefined && typeof(hour)=== "number") ? hour: this.clock.currentHour()
     if (currentHour >= 6 && currentHour < 12) {
       return 'Good morning'
     }
