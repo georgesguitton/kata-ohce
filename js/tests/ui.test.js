@@ -1,17 +1,8 @@
 const test = require('tape')
+const { ohce } = require('../ohce')
 
 test('main loop', (t) => {
-  /* TODO
-    Given the following inputs:
-    - hello
-    - oto
-    - quit
-
-    Check that the following messages are printed:
-    - olleh
-    - oto
-    - That was a palindrome!
-   */
-  t.fail('TODO')
+  t.plan(1)
+  t.deepEquals(ohce(["hello", "oto", "quit"]), ["olleh", "oto", "That was a palindrome!"])
   t.end()
 })
